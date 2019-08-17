@@ -113,7 +113,7 @@ function simple_visitor_counter_shortcode( $atts_total_view_counter )
 
 	$atts_total_view_counter = shortcode_atts( array(
 									'start' => add_option $total_count_key, 0 ),
-								), $atts_total_view_counter, 'bartag' );
+								), $atts_total_view_counter, 'svc' );
 
 	return "Total Site Visit = {$atts_total_view_counter['start']}";
 }
