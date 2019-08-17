@@ -108,14 +108,20 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 // Create Shorcode for Total View Counter
 function simple_visitor_counter_shortcode( $atts_total_view_counter )
 {
-	$totalvisitcount = get_option( 'site_visit_counter' );
 	$total_count_key = 'site_visit_counter';
+	$totalvisitcount = get_option( $total_count_key );
+	
 
 	$atts_total_view_counter = shortcode_atts( array(
 									'start' => add_option( $total_count_key, 0 ),
 								), $atts_total_view_counter, 'svc' );
+	if($atts_total_view_counter['start'] !='')
+	{
+		$totalvisitcount = $atts_total_view_counter['start'] +  $totalvisitcount ;
+	}
+	
 
-	return "Total Site Visit = {$atts_total_view_counter['start']}";
+	return "Total Site Visit = {$totalvisitcount}";
 }
 add_shortcode( 'svc', 'simple_visitor_counter_shortcode' );
 ?>
