@@ -105,6 +105,7 @@ function setPostViews( $postID ) {
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
 
+// Create Shorcode for Total View Counter
 function simple_visitor_counter_shortcode( $atts )
 {
 	$totalvisitcount = get_option( 'site_visit_counter' );
