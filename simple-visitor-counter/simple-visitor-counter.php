@@ -4,8 +4,8 @@ Plugin Name: Simple Visitor Counter
 Plugin URI: https://www.vox360.com
 Description: This is plugin is use for site visitor counter
 Version: 1.0
-Author: Azhar Deraiya
-Author URI: https://azharderaiya.in
+Author: Azhar Deraiya, Pashupatinath Mishra
+Author URI: https://www.pvmishra.com/
 */
 ?>
 <?php 
